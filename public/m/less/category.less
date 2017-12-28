@@ -1,0 +1,130 @@
+@import 'base.less';
+#header{
+    >a{
+        color: aliceblue;
+        font-size: 20px;
+        text-align: center;
+        
+        &.back-left{
+            position: absolute;
+            left: 10px;
+            top: 12px;
+        }
+        &.search_glass{
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+    form{
+        margin: 0 40px;
+        input{
+            background-color: white;
+            color: #000;
+            height: 30px;
+            text-align: left;
+            margin: 7px 0px 0px 0px ;
+        }
+    }
+
+}
+#main{
+    background: #ccc;
+    >div{
+        &.category-left{
+            float: left;
+            
+            ul{
+               padding: 0px;
+               margin: 0px;
+                li{
+                   
+                    &.active {
+                        >a {
+                            background-color: #ccc;
+                            color: @main-color;
+                       } 
+                    }
+                    a{
+                        display: block;
+                        color: #666;
+                        height: 45px;
+                        width: 80px;
+                        line-height: 45px;
+                        text-align: center;
+                        background-color: white;
+                        border-top: 1px solid @main-color;
+                        font-size: 14px;
+                      
+
+                    }
+                }
+            }
+        }
+//第二张方法        
+        // &.category-right{
+        //  position: absolute;
+        //  left: 80px;
+        //  top:45px;
+        //  bottom: 50px;
+        //   overflow: hidden;
+        //    width: auto;
+          
+        //     padding: 10px;
+        //     >div.mui-scroll{
+        //         position: relative;
+        //         div.mui-row{
+        //             div{
+        //                 a{
+        //                     display: block;
+        //                     background-color: white;
+        //                     text-align: center;
+        //                     p{
+        //                         margin: 0px;
+        //                     }
+        //                     img{
+        //                         width: 100%;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+//第二张方法
+
+
+
+        &.category-right{
+            position: relative;
+            height: 100%;
+             overflow: hidden;
+             padding: 10px;
+             
+              div.mui-scroll-wrapper{
+                 
+                   left: 10px;
+                   top: 10px;
+                   right: 10px;
+                   width: auto;
+                div.mui-scroll{
+                    height: 110%; 
+                    div.mui-row{
+                        div{
+                            a{
+                                display: block;
+                                background-color: white;
+                                text-align: center;
+                                p{
+                                    margin: 0px;
+                                }
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+              }
+           }
+    }
+}

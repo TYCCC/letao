@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汤爸爸的分页</title>
+    <!-- 引包 -->
+        <link rel="stylesheet" href="lib/mui/css/mui.css">
+        <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+        <link rel="stylesheet/less" href="less/category.less">
+        <script src="lib/less/less.js"></script>
+    <!-- 引包 -->
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="fa fa-arrow-left back-left" ></a>
+        <form action="#">
+            <input type="search" placeholder="肖峥是傻逼" value="">
+        </form>
+        <a href="./search.html" class="fa fa-search search_glass" ></a>
+    </header>
+    
+    <main id="main">
+        <div class="category-left">
+        
+            <ul>
+   
+            </ul>
+        
+        </div>
+        <div class="category-right" >
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                    <p>热门分类</p>
+                    <div class="mui-row">
+                      
+                 
+                    </div>     
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="mui-row">
+           <div class="mui-col-xs-3"><a href="index.html" class="fa fa-home active" >首页</a></div>
+           <div class="mui-col-xs-3"><a href="category.html" class="fa fa-bars" >分类</a></div>
+           <div class="mui-col-xs-3"><a href="shopCat.html" class="fa fa-shopping-cart" >购物车</a></div>
+           <div class="mui-col-xs-3"><a href="user.html" class="fa fa-user">个人中心</a></div>            
+        </div>
+    </footer>
+
+
+    <script id="categoryLeftTmp" type="text/html">
+        {{each rows as value i}}
+        <li><a href="#" data-id="{{value.id}}">{{value.categoryName}}</a></li>
+        {{/each}}
+    </script>
+    <script id="categoryRightTmp" type="text/html" >
+        {{each rows}}
+        <div class="mui-col-xs-4">
+                <a href="#">
+                    <img src="{{$value.brandLogo}}" alt="">
+                    <p>{{$value.brandName}}</p>
+                </a>
+            </div>
+          {{/each}}  
+    </script>
+    <!-- 引入js -->
+        <script src="lib/zepto/zepto.min.js"></script>
+        <script src="lib/mui/js/mui.js"></script>
+        <script src="lib/artTemplate/template.js"></script>
+        <script src="js/cetagory.js"></script>
+        
+    <!-- 引入js -->
+ 
+</body>
+</html>

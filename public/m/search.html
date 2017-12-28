@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汤爸爸的搜索</title>
+<!-- 引入包 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/search.less">
+    <script src="lib/less/less.js"></script>
+<!-- 引入包 -->
+    
+</head>
+<body>
+   <header id="header">
+       <a href="javascript:history.back();" class="fa fa-arrow-left" ></a>
+       <span>搜索中心之肖正SB</span>
+   </header>
+
+   <main id="main">
+       <div class="search-form">
+            <form action="#">
+                <input placeholder="傻人有傻福，可是朱磊没有" type="text">
+                <button type="button" class="mui-btn mui-btn-primary btn-search" >搜索</button>
+            </form>
+        </div>
+        <div class="search-history">
+                <div class="search-history-heading mui-clearfix">
+                        <span>搜索历史</span>
+                        <span class="fa fa-trash btn-clear">清空记录</span>
+                    </div>
+                <ul class="mui-table-view"></ul>
+        </div>
+   </main>
+   
+
+
+
+
+
+
+
+   <footer id="footer"></footer>
+
+
+<script id="search-HistoryTmp" type="text/html" >
+    {{each rows}}
+    <li class="mui-table-view-cell">
+            <a href="#"  >
+               {{$value}} 
+            <i class="fa fa-close btn-delete" data-history="{{$value}}"></i>
+           </a>
+        </li>
+    {{/each}}
+</script>
+<!--引入JS  -->
+   <script src="lib/zepto/zepto.min.js"></script>
+   <script src="lib/mui/js/mui.js"></script>
+   <script src="lib/artTemplate/template.js"></script>
+   <script src="js/search.js"></script>
+<!--引入JS  -->
+</body>
+</html>
